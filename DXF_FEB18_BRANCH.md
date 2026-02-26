@@ -54,14 +54,30 @@ The branch includes two sets of related work merged on February 18, 2022:
 git checkout -b dxffeb18 e03695a0872be910cf5d0ed944777f079ac8b8da
 ```
 
-## Note
+## Verification
 
-The branch exists locally. To verify:
+The branch has been created successfully and exists locally. To verify:
 ```bash
 git branch -v | grep dxffeb18
+# Output: dxffeb18  e03695a08 Merge pull request #4127 from openscad/fix-nullgl
 ```
 
 To switch to the branch:
 ```bash
 git checkout dxffeb18
 ```
+
+To verify the 17 files changed:
+```bash
+git diff 8d1fa8a8851a8747a3053c790f537e921ef4355c..dxffeb18 --stat | tail -3
+# Output: 17 files changed, 162 insertions(+), 197 deletions(-)
+```
+
+## Next Steps
+
+The branch `dxffeb18` has been created locally. To make it available on the remote repository, push it with:
+```bash
+git push origin dxffeb18
+```
+
+Note: Due to environment constraints, the branch could not be automatically pushed and may need to be pushed manually or through a separate mechanism.
